@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" version="1.6" method="upgrade">
+	<name>System - OptimizeTables</name>
+	<author>smart &amp; PaLyCH</author>
+	<creationDate>April 2018</creationDate>
+	<copyright>(C) 2006-2018, Joomlaportal.ru &amp; Palpalych.ru. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>joomlaportal.ru@gmail.com</authorEmail>
+	<authorUrl>http://joomlaportal.ru</authorUrl>
+	<version>1.0</version>
+	<description>Plugin runs daily optmization and repair databse table</description>
+	<files>
+		<filename plugin="optimizetables">optimizetables.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="time" type="text" default="00:00:00" label="Optimization Time" description="Set time to start database optimization" />
+				<field name="nextOptimization" type="text" default="" label="Next Optimization" description="Don't set this parameter value - it updated automatically from plugin" readonly="true" />
+				<field name="on_or_off" type="radio" default="1" label="Включить восстановление таблиц" description="Если да, то будет происходить восстановление таблиц в SQL базе. Запрос REPAIR TABLE">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+			</fieldset>
+		</fields>    
+	</config>
+</extension>
